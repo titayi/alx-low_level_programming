@@ -3,8 +3,6 @@
 /**
  * main - Entry point
  *
- * Description: Main function prints a paragraph
- *
  * Return: 0
  */
 int main(void)
