@@ -7,14 +7,14 @@
 */
 int main(void)
 {
-	int h;
+	int m;
 
-	for (h = '0'; h <= '9'; h++)
+	for (m = '0'; m <= '9'; m++)
 	{
-		putchar(h);
+		putchar(m);
 	}
 
-	putchar('\h');
+	putchar('\m');
 
 	return (0);
 }
