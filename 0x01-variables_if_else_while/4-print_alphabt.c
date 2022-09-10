@@ -5,7 +5,7 @@
 *
 * Return: 0
 */
-init main(void)
+int main(void)
 {
 	char c;
 
