@@ -18,7 +18,7 @@ int main(void)
 			putchar((m % 10) + '0');
 			putchar('\n');
 			putchar((k / 10) + '0');
-			putchar(k / % 10) + '0');
+			putchar((k % 10) + '0');
 
 			if(m == 98 && k == 99)
 
