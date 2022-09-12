@@ -5,7 +5,6 @@
 *
 * Return: 0
 */
-
 int main(void)
 {
 	int m, k;
@@ -16,12 +15,11 @@ int main(void)
 		{
 			putchar((m / 10) + '0');
 			putchar((m % 10) + '0');
-			putchar('\n');
+			putchar(' ');
 			putchar((k / 10) + '0');
 			putchar((k % 10) + '0');
 
-			if(m == 98 && k == 99)
-
+			if (m == 98 && k == 99)
 				continue;
 
 			putchar(',');
