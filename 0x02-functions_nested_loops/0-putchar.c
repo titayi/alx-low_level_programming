@@ -15,6 +15,5 @@ int main(void)
 		_putchar(a[b]);
 	}
 	_putchar('\n');
-
 	return (0);
 }	
