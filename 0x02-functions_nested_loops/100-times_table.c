@@ -21,13 +21,13 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 				}
-				if (l < 10 && j != 0)
+				if (l < 10 && k != 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
 					_putchar((l % 10) + '0');
 				}
-				else if (l >= 10 && res < 100)
+				else if (l >= 10 && l < 100)
 				{
 					_putchar(' ');
 					_putchar((l / 10) + '0');
@@ -37,7 +37,7 @@ void print_times_table(int n)
 				{
 					_putchar((l / 100) + '0');
 					_putchar((l / 10) % 10 + '0');
-					_putchar((l % 10) + '0')
+					_putchar((l % 10) + '0');
 				}
 				else
 					_putchar((l % 10) + '0');
