@@ -7,20 +7,22 @@
  */
 int main(void)
 {
-	unsigned long c, i, j, k, s;
+	int i;
+	unsigned long int j, k, n, s;
 
-	i = s = 0;
-	j = i;
+	j = 1;
+	k = 2;
+	s = 0;
 
-	for (c = 0; c < 50; c++)
+	for (i = 1; i < 33; ++i)
 	{
-		k = i + j;
-		i = j;
-		j = k;
-		if ((k % 2) == 0 && k < 4000000)
+		if (j < 4000000 && (j % 2) == 0)
 		{
-			s += k;
+			s = s + j;
 		}
+		n = j + k;
+		j = k;
+		k = n;
 	}
 	printf("%lu\n", s);
 	return (0);
