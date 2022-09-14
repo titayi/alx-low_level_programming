@@ -2,7 +2,7 @@
 
 /**
  * _abs - func that computes the absolute value of an integer
- * 
+ *
  *@n: the character under check
  *
  * Return: n
