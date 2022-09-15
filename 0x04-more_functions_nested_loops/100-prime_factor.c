@@ -8,16 +8,27 @@
 
 int main(void)
 {
-	long n, i;
+long int x = 612852475143;
 
-	n = 612852475143;
-	for (i =2; i < n; i++)
-	{
-		while (n % i == 0)
-			n = n / i;
-	}
+	long int py;
 
-	printf("%lu\n", n);
 
-	return (0);
+
+		for (py = 2; py < x; py++)
+
+				{
+
+							if (x % py == 0)
+
+										{
+
+														x = x / py;
+
+																}
+
+								}
+
+			printf("%ld\n", py);
+
+				return (0);
 }
