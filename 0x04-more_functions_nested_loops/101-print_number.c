@@ -20,7 +20,7 @@ void print_number(int n)
 	}
 	else if (n > -10 && n < 0)
 	{
-		n = n - 2* n;
+		n = n - 2 * n;
 		_putchar('-');
 		_putchar(n + '0');
 	}
@@ -38,7 +38,7 @@ void print_number(int n)
 	}
 	while (b > 0)
 	{
-		m = z /b;
+		m = z / b;
 		z = z % b;
 		_putchar(m + '0');
 		b = b / 10;
