@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long m, k;
+	long m, k;
 
 	m = 612852475143;
 
