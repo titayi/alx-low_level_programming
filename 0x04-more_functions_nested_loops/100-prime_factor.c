@@ -7,18 +7,20 @@
  */
 int main(void)
 {
-	long m, k;
+	unsigned long i = 2;
+	unsigned long k = 0;
+	unsigned long n = 612852475143;
 
-	m = 612852475143;
-
-	for (k = 2; m > k; k++)
+	while (n > i)
 	{
-		while (m % k == 0)
+		while (n % i == 0)
 		{
-			m = m / k;
+			if (i > k)
+				k = i
+			n = n / i;
 		}
+		i++;
 	}
-	printf("%lu", k);
-	putchar('\n');
+	printf("%lu\n", k);
 	return (0);
 }
