@@ -11,16 +11,18 @@ int main(void)
 	while (x < 101)
 	{
 		if (x % 3 == 0 && x % 5 == 0)
-		{												printf("%s", "FizzBuzz");
+		{
+			printf("%s", "FizzBuzz");
 		}
 		else if (x % 3 == 0)
-		{												printf("%s", "Fizz");
+		{
+			printf("%s", "Fizz");
 		}
 		else if (x % 5 == 0)
 		{
 			printf("%s", "Buzz");
 		}
-		else 
+		else
 		{
 			printf("%d", x);
 		}
