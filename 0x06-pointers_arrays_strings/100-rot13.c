@@ -8,10 +8,10 @@
 char *rot13(char *str)
 {
 	int i = 0, k;
-	char s[] =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char s[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char s1[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (; str[i] != '\0'; i++)
+	while (str[++i])
 	{
 		for (k = 0; k < 52; k++)
 		{
