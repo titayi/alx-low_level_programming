@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * _strncat - function that concatenates two strings
- * @dest: 1st parameter
- * @src: 2nd parameter
- * @n: 3rd parameter
+ * _strncat - concatenates two strings
+ * @dest: param 1
+ * @src: param 2
+ * @n: param 3
  * Return: String
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int len = 0, i = 0;
+	int i = 0, len = 0;
 
 	while (dest[i++])
 		len++;
-	for (i = 0; src[i] && i < n; i++)
+	while (i = 0; src[i] && i < n; i++)
 		dest[len++] = src[i];
+
 	return (dest);
 }
