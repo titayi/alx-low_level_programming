@@ -2,45 +2,21 @@
 
 /**
  * print_number - function that prints an integer
- * @n: Parameter
- * Return: 0
+ * @n: parameter 
+ * Return: void
  */
 void print_number(int n)
 {
-	unsigned int z;
-	int m, b;
+	unsigned int m = n;
 
-	b = 10;
-
-	if (n < 10 && n >= 0)
+	if (n < 0)
 	{
-		_putchar(n + '0');
-	}
-	else if (n > -10 && n < 0)
-	{
-		n = n - 2 * n;
 		_putchar('-');
-		_putchar(n + '0');
+		m = -m;
 	}
-	else
+	if ((m / 10) > 0)
 	{
-		if (n < 0)
-		{
-			n = n * -1;
-			_putchar('-');
-		}
-		z = n;
-
-	while (z / b > 0)
-	{
-		b = b * 10;
+		print_number(m / 10);
 	}
-	while (b > 0)
-	{
-		m = z / b;
-		z = z % b;
-		_putchar(m + '0');
-		b = b / 10;
-	}
-	}
+	_putchar((m % 10) + '0');
 }
