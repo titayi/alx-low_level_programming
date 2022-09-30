@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * @argc - size of argv
+ * @argc: size of argv
  * @argv: Array size of argc
  * Return: 0
  */
