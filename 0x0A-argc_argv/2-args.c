@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point 
+ * main - Entry point
  * @argc: Size of argv
  * @argv: Anarray size of argc
  * Return: 0
