@@ -2,25 +2,27 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
- * @argc: Size of argv
- * @argv: An array size of argc
+ * main - multiplies two numbers
+ * @argc: The count argument
+ * @argv: The vector argument
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	int mul = 0;
+	int i, mul;
 
-	if (argc == 3)
+	mul = 1;
+
+	if (argc < 3)
 	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", mul);
-		return (0);
-	}
-	else
-	{
-		printf("ERROR\n");
+		printf("Error\n");
 		return (1);
 	}
+	for (i = 1; i < argc; i++)
+	{
+		mul *= atoi(argv[i]);
+	}
+	printf("%d\n", mul);
+	return (0);
 }
