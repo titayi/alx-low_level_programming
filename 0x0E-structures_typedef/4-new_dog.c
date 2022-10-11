@@ -5,12 +5,12 @@
 /**
  * _strlen - length of the string
  * @str: Param
- * 
  * Return: success
  */
 int _strlen(char *str)
 {
 	int len = 0;
+
 	while (str)
 		len++;
 
@@ -21,7 +21,6 @@ int _strlen(char *str)
  * _strcopy - copies the string
  * @dest: Param 1
  * @src: Param 2
- * 
  * Return: String
  */
 char *_strcopy(char *dest, char *src)
