@@ -1,76 +1,56 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <stdio.h>
-
-/**
- * _strlen - length of the string
- * @str: Param
- * Return: success
- */
-int _strlen(char *str)
-{
-	int len = 0;
-
-	while (str)
-		len++;
-
-	return (len);
-}
-
-/**
- * _strcopy - copies the string
- * @dest: Param 1
- * @src: Param 2
- * Return: String
- */
-char *_strcopy(char *dest, char *src)
-{
-	int i = 0;
-
-	for (; src[i]; i++)
-		dest[i] = src[i];
-
-	dest[i] = '\0';
-	return (dest);
-}
 
 /**
  * new_dog - function that creates a new dog
  * @name: Dog's name
  * @age: Dog's age
  * @owner: Dog's owner
- *
  * Return: NULL if the function fails
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *bosco;
+	int i, len1, len2;
+	struct dog *doggy = NULL;
 
-	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
+	len1 = 0;
+	while (name[len1] != '\0')
+		len1++;
 
-	bosco = malloc(sizeof(dog_t));
-	if (bosco == NULL)
-		return (NULL);
+	len2 = 0;
+	while (owner[len2] != '\0')
+		len2++;
 
-	bosco->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (bosco->name == NULL)
+	doggy = malloc(sizeof(struct dog));
+
+	if (doggy == NULL)
 	{
-		free(bosco);
+		free(doggy);
+		return (NULL);
+	}
+	doggy->name = malloc(len1 + 1);
+
+	if (doggy->name == NULL)
+	{
+		free(doggy->name);
+		free(doggy);
+		return (NULL);
+	}
+	doggy->owner = malloc(len2 + 1);
+
+	if (doggy->owner == NULL)
+	{
+		free(doggy->name);
+		free(doggy->owner);
+		free(doggy);
 		return (NULL);
 	}
 
-	bosco->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (bosco->owner == NULL)
-	{
-		free(bosco->name);
-		free(bosco);
-		return (NULL);
-	}
-
-	bosco->name = _strcopy(bosco->name, name);
-	bosco->age = age;
-	bosco->owner = _strcopy(bosco->owner, owner);
-
-	return (bosco);
+	for (i = 0; i <= len1; i++)
+		doggy->name[i] = name[i];
+	
+	for (i = 0; i <= len2; i++)
+		doggy->owner[i] = owner[i];
+	doggy->age = age;
+	return (doggy);
 }
