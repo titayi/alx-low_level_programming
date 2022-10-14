@@ -4,7 +4,14 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-typedef struct printer{
+/**
+ * struct printer - struct
+ * @symbol: Argument
+ * @print: func pointer
+ */
+
+typedef struct printer
+{
 	char *symbol;
 	void (*print)(va_list arg);
 } printer_t;
