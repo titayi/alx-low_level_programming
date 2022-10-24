@@ -2,7 +2,7 @@
 
 /**
  * list_len - func returns No of elements in a linkes list_t
- * #h: Pointer to the list
+ * @h: Pointer to the list
  *
  * Return: No of elements
  */
