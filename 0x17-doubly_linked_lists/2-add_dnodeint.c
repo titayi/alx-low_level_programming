@@ -2,7 +2,7 @@
 
 /**
  * add_dnodeint - adds a new node at the beginning of the list
- * @h: double pointer to the list
+ * @head: double pointer to the list
  * @n: the data
  *
  * Return: Address of new element or Nullif it fails
